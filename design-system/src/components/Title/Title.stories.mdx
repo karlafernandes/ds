@@ -1,0 +1,25 @@
+import { ArgsTable, Canvas, Story, Meta } from "@storybook/addon-docs/blocks";
+
+import Title from ".";
+
+<Meta title="Components/Title" />
+
+## Title
+
+Use this component for the main title of a page.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{ text: "Page Title", size: "big" }}
+    argTypes={{
+      size: { control: { type: "select", options: ["big", "small"] } },
+    }}
+  >
+    {({ text, size }) => <Title size={size}>{text}</Title>}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Title} />

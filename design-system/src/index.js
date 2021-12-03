@@ -14,3 +14,4 @@ export { default as Hr } from "./components/Hr";
 export { default as Icon } from "./components/Icon";
 export { default as Select } from "./components/Select";
 export { default as SummaryTable } from "./components/SummaryTable";
+export { default as Title } from "./components/Title";
