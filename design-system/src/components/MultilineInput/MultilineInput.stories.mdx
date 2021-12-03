@@ -1,0 +1,33 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+
+import MultilineInput from ".";
+
+<Meta
+  title="Components/MultilineInput"
+  parameters={{
+    viewport: {
+      defaultViewport: "mobile1",
+    },
+  }}
+/>
+
+## Multiline Input
+
+Multiline input area, disabled by default, with button to enter editing mode
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: "Address",
+      text: "Norra Larsmovägen 70, KUOPIO\n70260\nFinland",
+    }}
+  >
+    {(args) => <MultilineInput {...args} />}
+  </Story>
+</Canvas>
+
+
+## Props
+
+<ArgsTable of={MultilineInput} />

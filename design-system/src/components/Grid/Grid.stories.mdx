@@ -1,0 +1,43 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import Grid from ".";
+import ProductItem from "../ProductItem";
+import productImage from "../ProductItem/productImageSample.jpg";
+
+export const args = {
+  columns: 2,
+  };
+  
+  
+export const ProductItemArgs = {
+  size: "medium",
+  name: "Nike Air Force 1 '07 LX",
+  image: productImage,
+  price: "95.00",
+  description: "Men's Shoe",
+};
+
+<Meta title="Components/Grid" parameters={{
+    viewport: {
+      defaultViewport: 'mobile1'
+    }}}/>
+
+## Grid
+
+ A container to hold product ProductItems
+
+<Canvas>
+  <Story name="Default" args={args}>
+    {({ columns, ...args }) => (
+      <Grid columns={columns}>
+        {[...Array(8)].map((e, i) => (
+          <ProductItem key={i} {...ProductItemArgs} />
+        ))}
+      </Grid>
+    )}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Grid} />
