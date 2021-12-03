@@ -42,6 +42,38 @@ module.exports = {
             type: "custom-spacing",
           },
         },
+        /* Filter and extract radii tokens */
+        {
+          destination: "radii.js",
+          format: "javascript/es6",
+          filter: {
+            type: "custom-radius",
+          },
+        },
+        /* Filter and extract sizes tokens */
+        {
+          destination: "sizes.js",
+          format: "javascript/es6",
+          filter: {
+            type: "dimension",
+          },
+        },
+        /* Filter and extract font tokens */
+        {
+          destination: "font.js",
+          format: "javascript/es6",
+          filter: {
+            type: "custom-fontStyle",
+          },
+        },
+        /* Filter and extract effect tokens */
+        {
+          destination: "effect.js",
+          format: "javascript/es6",
+          filter: {
+            type: "custom-shadow",
+          },
+        },
         /* Filter and extract color tokens*/
         {
           destination: "colors.js",
