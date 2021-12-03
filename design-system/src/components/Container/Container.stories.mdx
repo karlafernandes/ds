@@ -1,0 +1,95 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs/blocks";
+
+import Container from ".";
+import { colors  } from "../../tokens";
+
+<Meta title="Components/Container" />
+
+## Container
+
+A wrapper for the page content with paddings
+
+<Canvas>
+  <Story name="Default">
+    <Container>
+      This is just a sample content: Wenn sich der Mensch, wenn er sie beim
+      Kragen hätte. Ich höre schon des Dorfs Getümmel, Hier ist des Volkes
+      wahrer Himmel, Zufrieden jauchzet groß und klein, Hier bin ich nicht; doch
+      viel ist mir bewusst. Es irrt der Mensch, wenn er nur Worte hört, Es müsse
+      sich dabei doch auch was denken lassen. Vernunft fängt wieder an zu
+      sprechen Und Hoffnung wieder an zu blühn; Man sehnt sich nach des Lebens
+      goldner Baum. Und wandelt mit bedächt'ger Schnelle Vom Himmel durch die
+      Welt zur Hölle. Es irrt der Mensch, wenn er sie beim Kragen hätte. So
+      schreitet in dem engen Bretterhaus (Theater, Bühne) Den ganzen Kreis der
+      Schöpfung aus, Und wandelt mit bedächtger Schnelle Vom Himmel durch die
+      Welt zur Hölle. So schreitet in dem engen Bretterhaus (Theater, Bühne) Den
+      ganzen Kreis der Schöpfung aus, Und wandelt mit bedächtger Schnelle Vom
+      Himmel durch die Welt zur Hölle. Ich höre schon des Dorfs Getümmel, Hier
+      ist des Volkes wahrer Himmel, Zufrieden jauchzet groß und klein, Hier bin
+      ich nicht; doch viel ist mir bewusst. Vernunft fängt wieder an zu sprechen
+      Und Hoffnung wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und
+      Hoffnung wieder an zu blühn; Man sehnt sich nach des Lebens goldner Baum.
+    </Container>
+  </Story>
+  <Story name="With/Without paddings" args={{ padding: ["right", "bottom"] }}>
+    {(args) => (
+        <Container {...args} background="onSurface100">
+          Only right and botom padding on this container. Wenn sich der Mensch, wenn er sie beim
+          Kragen hätte. Ich höre schon des Dorfs Getümmel, Hier ist des Volkes
+          wahrer Himmel, Zufrieden jauchzet groß und klein, Hier bin ich nicht;
+          doch viel ist mir bewusst. Es irrt der Mensch, wenn er nur Worte hört,
+          Es müsse sich dabei doch auch was denken lassen. Vernunft fängt wieder
+          an zu sprechen Und Hoffnung wieder an zu blühn; Man sehnt sich nach
+          des Lebens goldner Baum. Und wandelt mit bedächt'ger Schnelle Vom
+          Himmel durch die Welt zur Hölle. Es irrt der Mensch, wenn er sie beim
+          Kragen hätte. So schreitet in dem engen Bretterhaus (Theater, Bühne)
+          Den ganzen Kreis der Schöpfung aus, Und wandelt mit bedächtger
+          Schnelle Vom Himmel durch die Welt zur Hölle. So schreitet in dem
+          engen Bretterhaus (Theater, Bühne) Den ganzen Kreis der Schöpfung aus,
+          Und wandelt mit bedächtger Schnelle Vom Himmel durch die Welt zur
+          Hölle. Ich höre schon des Dorfs Getümmel, Hier ist des Volkes wahrer
+          Himmel, Zufrieden jauchzet groß und klein, Hier bin ich nicht; doch
+          viel ist mir bewusst. Vernunft fängt wieder an zu sprechen Und
+          Hoffnung wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und
+          Hoffnung wieder an zu blühn; Man sehnt sich nach des Lebens goldner
+          Baum.
+        </Container>
+    )}
+  </Story>
+  <Story
+    name="With background color"
+    argTypes={{
+      background: {
+        control: { type: "select", options: Object.keys(colors) },
+      },
+    }}
+    args={{ background: "primary100" }}
+  >
+    {(args) => (
+      <Container {...args}>
+        Container with background color: Wenn sich der Mensch, wenn er sie beim
+        Kragen hätte. Ich höre schon des Dorfs Getümmel, Hier ist des Volkes
+        wahrer Himmel, Zufrieden jauchzet groß und klein, Hier bin ich nicht;
+        doch viel ist mir bewusst. Es irrt der Mensch, wenn er nur Worte hört,
+        Es müsse sich dabei doch auch was denken lassen. Vernunft fängt wieder
+        an zu sprechen Und Hoffnung wieder an zu blühn; Man sehnt sich nach des
+        Lebens goldner Baum. Und wandelt mit bedächt'ger Schnelle Vom Himmel
+        durch die Welt zur Hölle. Es irrt der Mensch, wenn er sie beim Kragen
+        hätte. So schreitet in dem engen Bretterhaus (Theater, Bühne) Den ganzen
+        Kreis der Schöpfung aus, Und wandelt mit bedächtger Schnelle Vom Himmel
+        durch die Welt zur Hölle. So schreitet in dem engen Bretterhaus
+        (Theater, Bühne) Den ganzen Kreis der Schöpfung aus, Und wandelt mit
+        bedächtger Schnelle Vom Himmel durch die Welt zur Hölle. Ich höre schon
+        des Dorfs Getümmel, Hier ist des Volkes wahrer Himmel, Zufrieden
+        jauchzet groß und klein, Hier bin ich nicht; doch viel ist mir bewusst.
+        Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu sprechen
+        Und Hoffnung wieder an zu sprechen Und Hoffnung wieder an zu blühn; Man
+        sehnt sich nach des Lebens goldner Baum.
+      </Container>
+    )}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Container} />
