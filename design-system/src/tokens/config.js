@@ -31,7 +31,15 @@ module.exports = {
           destination: "typography.js",
           format: "javascript/es6",
           filter: function (prop) {
-            return prop.path[0] === "font";
+            return prop.path[0] === "typography";
+          },
+        },
+        /* Filter and extract spacing tokens */
+        {
+          destination: "spacing.js",
+          format: "javascript/es6",
+          filter: {
+            type: "custom-spacing",
           },
         },
         /* Filter and extract color tokens*/
