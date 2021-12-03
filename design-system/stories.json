@@ -70,6 +70,10 @@
       "fileName": "/home/runner/work/ds/ds/design-system/src/intro.stories.mdx",
       "framework": "react"
     },
+    "Spacing": {
+      "fileName": "/home/runner/work/ds/ds/design-system/src/spacing.stories.mdx",
+      "framework": "react"
+    },
     "Typography": {
       "fileName": "/home/runner/work/ds/ds/design-system/src/typography.stories.mdx",
       "framework": "react"
@@ -364,6 +368,16 @@
       "parameters": {
         "docsOnly": true,
         "__id": "intro--page"
+      }
+    },
+    "spacing--page": {
+      "id": "spacing--page",
+      "name": "Page",
+      "kind": "Spacing",
+      "story": "Page",
+      "parameters": {
+        "docsOnly": true,
+        "__id": "spacing--page"
       }
     },
     "typography--page": {
